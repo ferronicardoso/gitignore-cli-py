@@ -1,5 +1,8 @@
 # gitignore-cli
 
+![PyPI - Version](https://img.shields.io/pypi/v/gitignore-cli-py?color=%23ffd43b)
+
+
 **gitignore-cli** is a command-line tool that allows you to easily generate `.gitignore` files by selecting from pre-defined templates. It leverages the collection of `.gitignore` templates provided by GitHub and lets you combine multiple templates into a single file.
 
 ## Features
