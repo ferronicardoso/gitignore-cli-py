@@ -1,0 +1,3 @@
+[submodule "gitignore_cli/gitignore"]
+	path = gitignore_cli/gitignore
+	url = https://github.com/ninjapythonbrasil/gitignore
