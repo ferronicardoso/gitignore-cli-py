@@ -12,4 +12,4 @@ def list_available_templates(template_dir=None):
             if file.endswith(".gitignore"):
                 templates.append(os.path.splitext(file)[0])
 
-    return templates
+    return sorted(templates)
