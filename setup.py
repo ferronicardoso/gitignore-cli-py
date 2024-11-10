@@ -54,7 +54,7 @@ class PostInstallCommand(install):
 
 setup(
     name="gitignore-cli-py",
-    version="0.1.1",
+    version="0.1.2",
     author="Raphael Augusto Ferroni Cardoso",
     author_email="rferronicardoso@gmail.com",
     description="A command-line tool to generate .gitignore files from predefined templates",
@@ -87,5 +87,5 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Topic :: Software Development :: Version Control",
     ],
-    python_requires='>=3.7',
+    python_requires='>=3.8',
 )

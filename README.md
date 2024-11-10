@@ -15,20 +15,68 @@
 
 ## Installation
 
-You can install the `gitignore-cli` using `pip`:
+To install **gitignore-cli-py**, we recommend using **pipx** to ensure the command is globally accessible and isolated from other Python packages.
+
+### Install pipx (if not already installed)
+
+`pipx` is a tool to install and run Python applications in isolated environments. First, install `pipx` if you haven't already:
 
 ```bash
-pip install gitignore-cli
+sudo apt install pipx
 ```
 
-Make sure you have Python 3.7+ installed.
+### Install gitignore-cli-py with pipx
+Now, use pipx to install gitignore-cli-py globally:
+
+```bash
+pipx install gitignore-cli-py
+```
+
+This command will make the gitignore-cli command available globally in your terminal.
+After installing, ensure that pipx is added to your PATH by running:
+
+```bash
+pipx ensurepath
+```
+
+### Verifying the Installation
+After installation, you can verify that gitignore-cli is working by running:
+
+```bash
+gitignore-cli --help
+```
+
+This should display the help message for gitignore-cli.
+
+### Autocomplete setup
+
+The CLI also supports autocompletion for templates when using **Bash** or **Zsh**. To enable autocompletion, follow these steps:
+
+#### For Bash:
+
+Run the following command to generate the autocomplete script and add the following line to your `.bashrc` file:
+   
+```bash
+_GITIGNORE_CLI_COMPLETE=bash_source gitignore-cli > ~/.gitignore-cli-complete.sh
+echo "source ~/.gitignore-cli-complete.sh" >> ~/.bashrc
+source ~/.bashrc
+```
+
+#### For Zsh:
+
+Run the following command to generate the autocomplete script and add the following line to your `.zshrc` file:
+   
+```bash      
+_GITIGNORE_CLI_COMPLETE=zsh_source gitignore-cli > ~/.gitignore-cli-complete.sh
+echo "source ~/.gitignore-cli-complete.sh" >> ~/.zshrc
+source ~/.zshrc
+```
 
 ## Usage
 
 ### 1. Generate a `.gitignore` file
 
 To generate a `.gitignore` file with one or more templates, use the following command:
-
 
 ```bash
 gitignore-cli generate <template1> <template2> --output <output_file>
@@ -42,7 +90,7 @@ gitignore-cli generate Python Node --output .gitignore
 
 This will create a `.gitignore` file combining the templates for Python and Node.js.
 
-### 2. List available templates
+### List available templates
 
 To list all the available templates:
 
@@ -51,50 +99,6 @@ gitignore-cli list-templates
 ```
 
 This will output a list of all templates, organized in columns for easier readability.
-
-### 3. Autocomplete setup
-
-The CLI also supports autocompletion for templates when using **Bash** or **Zsh**. To enable autocompletion, follow these steps:
-
-#### For Bash:
-
-1. Run the following command to generate the autocomplete script:
-   
-```bash
-_GITIGNORE_CLI_COMPLETE=bash_source gitignore-cli > ~/.gitignore-cli-complete.sh
-```
-
-2. Add the following line to your `.bashrc` file:
-
-```bash   
-source ~/.gitignore-cli-complete.sh
-```
-
-3. Reload your Bash configuration:
-4. 
-```
-source ~/.bashrc
-```
-
-#### For Zsh:
-
-1. Run the following command to generate the autocomplete script:
-   
-```bash      
-_GITIGNORE_CLI_COMPLETE=zsh_source gitignore-cli > ~/.gitignore-cli-complete.sh
-```
-
-2. Add the following line to your `.zshrc` file:
-   
-```bash
-source ~/.gitignore-cli-complete.sh
-```
-
-3. Reload your Zsh configuration:
-
-```bash   
-source ~/.zshrc
-```
 
 ### 4. Example
 
